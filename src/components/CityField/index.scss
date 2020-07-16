@@ -1,0 +1,27 @@
+.field {
+    display: flex;
+    padding: 5px 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 500px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    align-items: center;
+    input {
+      flex: 1;
+      height: 30px;
+      border: none;
+      outline: none;
+      padding-left: 10px;
+      &::placeholder {
+        color: #d6d6d6;
+      }
+    }
+
+
+    i {
+      color: #d6d6d6;
+      
+    }
+  }

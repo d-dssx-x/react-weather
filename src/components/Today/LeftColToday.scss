@@ -1,0 +1,37 @@
+.col {
+    flex: 1 0;
+}
+.f {
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+    .wrapper {
+      display: flex;
+      align-items: center;        
+
+      i {
+        font-size: 130px;
+      }
+
+      .temp {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .value {
+          position: relative;
+          font-size: 50px;
+
+          &::after {
+            position: absolute;
+            top: -10px;
+            content:'\B0';
+          }
+        }
+        .desc {
+          font-size: 25px;
+          font-weight: 400;
+        }
+      }
+    }
+}
