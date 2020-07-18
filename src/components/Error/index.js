@@ -12,7 +12,8 @@ const Error = ({ cod = '000', message = 'Bad' }) => {
       <img
         className="cat"
         // eslint-disable-next-line no-undef
-        src={require('../../assets/img/bad.png')}/>
+        src={require('../../assets/img/bad.png')}
+        alt="Cat"/>
     </div>
   )
 }

@@ -4,7 +4,8 @@ import { toCelsius } from '../../helpers/weather.helper'
 import { selectIcon } from '../../helpers/fontClasses.helper'
 import PropTypes from 'prop-types'
 
-const Item = ({ main: {temp}, dt_txt, weather }) => {
+// eslint-disable-next-line camelcase
+const Item = ({ main: { temp }, dt_txt, weather }) => {
   return (
     <div className="item">
       <div className="time">
