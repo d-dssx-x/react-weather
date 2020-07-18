@@ -5,7 +5,7 @@ import Item from './Item'
 
 
 const WeatherHourly = ({ list }) => {
-  const lowList = list.splice(0, 10)
+  const lowList = list.splice(1, 11)
   return (
     <div className="hourly">
       {lowList.map((el, i) => <Item
