@@ -14,7 +14,6 @@ export const useHttp = () => {
       const fullURL = isDay
         ? `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
         : `${proxy}api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
-
       const res = await fetch(fullURL, {
         method: 'GET',
       })
