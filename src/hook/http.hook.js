@@ -9,9 +9,13 @@ export const useHttp = () => {
   const request = async (city = 'Minsk', isDay = true) => {
     setLoading(true)
     try {
-      const full_URL = isDay
-        ? `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
-        : `${proxy}api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+      let full_URL = isDay
+        ? `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        : `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+
+      if(process.env.NODE_ENV === 'development') {
+        full_URL = proxy + full_URL
+      }
       const res = await fetch(full_URL, {
         method: 'GET',
       })

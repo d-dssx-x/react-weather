@@ -8,6 +8,7 @@
     background-color: #ffffff;
     border-radius: 20px;
     align-items: center;
+    
     input {
       flex: 1;
       height: 30px;
@@ -17,9 +18,12 @@
       &::placeholder {
         color: #d6d6d6;
       }
+      &:focus {
+        i {
+          color: #555454
+        }
+      }
     }
-
-
     i {
       color: #d6d6d6;
       

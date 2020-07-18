@@ -1,9 +1,38 @@
-.error {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50vh;
-    color: #ffffffe5;
+.error-wrapper {
+    .error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        position: relative;
+    
+        margin: 10% auto;
+    }
+    
+    .cat {
+        position: absolute;
+        bottom: -500px;
+        right: -100px;
+        width: 500px;
+        height: 500px;
+        animation: anim .5s ease-in-out forwards;
+        @keyframes anim {
+            0% {
+                bottom: -500px;
+            }
+            100% {
+                 bottom: -200px;
+            }
+        }
+        @keyframes anim-out {
+            0% {
+                bottom: -200px;
+            }
+
+            100% {
+                bottom: -500px;
+            }
+        }
+    }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './index.scss'
 
 const CityField = ({ setCity }) => {
@@ -27,5 +28,9 @@ const CityField = ({ setCity }) => {
     </div>
   )
 }
+CityField.propTypes = {
+  setCity: PropTypes.func,
+}
+
 
 export default CityField

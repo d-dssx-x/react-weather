@@ -1,0 +1,38 @@
+.hourly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 40px;
+
+    color: #fff;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        background: rgba($color: #fff, $alpha: .3);
+        padding: 5px 30px;
+        border-radius: 16px;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+
+        .time {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .temp {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: -5px;
+                content:'\B0';
+            }
+        }
+
+        i {
+            font-size: 25px;
+        }
+    }
+}

@@ -5,7 +5,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "google"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -32,6 +33,8 @@
         ],
         "space-infix-ops": "error",
         "react/prop-types": "error",
-        "no-undef": "off"
+        "linebreak-style": "off",
+        "require-jsdoc": "off",
+        "object-curly-spacing": ["error", "always"]
     }
 }
