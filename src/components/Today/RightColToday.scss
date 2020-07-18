@@ -11,6 +11,44 @@
       flex-direction: row;
       justify-content: space-between;
 
+
+      @media screen and (max-width: 700px) {
+        & {
+
+          flex-direction: column;
+
+          .item {
+            padding: 1px 0 !important;
+          }
+
+          .val {
+            font-size: 18px !important;
+          }
+
+          .des {
+            font-size: 13px !important;
+          }
+        }
+        
+      }
+      @media screen and (min-height: 600px) {
+        & {
+          .item {
+            padding: 5px 0 !important;
+          }
+
+          .val {
+            font-size: 20px !important;
+          }
+
+          .des {
+            font-size: 15px !important;
+          }
+        }
+        
+      }
+  
+
       .item {
         padding: 20px 0;
         display: flex;

@@ -20,25 +20,26 @@ body {
   top: 0;
   bottom: 0;
   padding: 0 80px;
-  overflow: hidden;
-  
+  overflow: hidden;  
+
+  @media screen and (max-width: 500px) {
+    & {
+      padding: 0 10px;
+    }
+  }
+
   &.day {
     opacity: 1;
     background: url('./assets/img/bg-d.jpg') no-repeat;
     background-size: cover;
     color: rgb(0, 0, 0);
-    transform: all 1s ease-out;
   }
   &.night {
     opacity: 1;
     background: url('./assets/img/bg-n.jpg') no-repeat;
     background-size: cover;
     color: #ffffff;
-    transform: all 1s ease-out;
   }
 
 }
-
-
-
 

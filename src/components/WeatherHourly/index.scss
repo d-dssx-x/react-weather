@@ -7,6 +7,26 @@
 
     color: #fff;
 
+
+
+    
+    @media screen and (max-width: 700px) {
+
+        & {
+            margin-top: 30px !important;
+            overflow-x: auto !important;
+
+
+            .item {
+                padding: 2px 20px !important;
+
+                font-size: 15px !important;
+
+                margin-right: 10px;
+            }
+        }
+    }
+
     .item {
         display: flex;
         flex-direction: column;

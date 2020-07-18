@@ -18,7 +18,9 @@ const CityField = ({ setCity }) => {
 
   return (
     <div className="field">
-      <i className="fas fa-search"></i>
+      <div className="icon">
+        <i className="fas fa-search"></i>
+      </div>
       <input
         placeholder="Minsk"
         value={value}
