@@ -1,4 +1,6 @@
-import { useState } from "react"
+/* eslint-disable max-len */
+/* eslint-disable operator-linebreak */
+import { useState } from 'react'
 
 export const useHttp = () => {
   const API_KEY = 'ef3cca48dcfd23339472bdbcf2d3f4f5'
@@ -9,14 +11,11 @@ export const useHttp = () => {
   const request = async (city = 'Minsk', isDay = true) => {
     setLoading(true)
     try {
-      let full_URL = isDay
-        ? `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
-        : `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+      const fullURL = isDay
+        ? `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        : `${proxy}api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
 
-      if(process.env.NODE_ENV === 'development') {
-        full_URL = proxy + full_URL
-      }
-      const res = await fetch(full_URL, {
+      const res = await fetch(fullURL, {
         method: 'GET',
       })
       if (!res.ok) {
@@ -38,5 +37,5 @@ export const useHttp = () => {
 
   const clearError = () => setError(null)
 
-  return {request, loading, error, clearError}
+  return { request, loading, error, clearError }
 }
